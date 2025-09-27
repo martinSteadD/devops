@@ -8,3 +8,9 @@ Workflow added today: 26/09/25 second time
 [![LICENSE](https://img.shields.io/github/license/martinSteadD/devops.svg?style=flat-square)](https://github.com/martinSteadD/devops/blob/master/LICENSE)
 
 [![Releases](https://img.shields.io/github/release/martinSteadD/devops/all.svg?style=flat-square)](https://github.com/martinSteadD/devops/releases)
+
+# DevOps
+[![Develop Build](https://img.shields.io/github/actions/workflow/status/martinSteadD/devops/main.yml?branch=develop&label=develop%20build&style=flat-square)](https://github.com/martinSteadD/devops/actions)
+
+
+[![Master Build](https://img.shields.io/github/actions/workflow/status/martinSteadD/devops/main.yml?branch=master&label=master%20build&style=flat-square)](https://github.com/martinSteadD/devops/actions)
