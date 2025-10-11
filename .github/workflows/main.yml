@@ -19,6 +19,11 @@ jobs:
         run: mvn package
       - name: Run docker compose
         run: docker compose up --abort-on-container-exit
+      - name: View container logs
+        if: always()
+        run: docker compose logs --no-color
+
+
 
 
 
