@@ -148,14 +148,23 @@ public class App
     {
         if (emp != null)
         {
-            System.out.println(
-                    emp.emp_no + " "
-                            + emp.first_name + " "
-                            + emp.last_name + "\n"
-                            + emp.title + "\n"
-                            + "Salary:" + emp.salary + "\n"
-                            + emp.dept_name + "\n"
-                            + "Manager: " + emp.manager + "\n");
+            // Print header
+            System.out.printf(
+                    "%-10s %-15s %-20s %-8s %-20s %-20s %-20s%n",
+                    "Emp No", "First Name", "Last Name", "Salary", "Title", "Department", "Manager");
+
+            // Print employee details
+            String emp_string = String.format(
+                    "%-10s %-15s %-20s %-8s %-20s %-20s %-20s",
+                    emp.emp_no, emp.first_name, emp.last_name, emp.salary,
+                    emp.title, emp.dept_name, emp.manager);
+
+            System.out.println(emp_string);
+        }
+        else
+        {
+            System.out.println("No employee data to display.");
         }
     }
+
 }
