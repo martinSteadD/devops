@@ -67,7 +67,6 @@ public class App
         }
         if (con == null) {
             System.out.println("All connection attempts failed. Check Docker logs and port mapping.");
-            return;
         }
 
     }
