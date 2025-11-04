@@ -5,42 +5,43 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 import java.util.ArrayList;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import static org.junit.jupiter.api.Assertions.*;
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 
 public class AppTest
 {
 
-    static App app;
+    App app;
 
     @BeforeAll
-    static void init()
+    void init()
     {
         app = new App();
     }
 
     @Test
-    void printSalariesTestNull()
+    public void printSalariesTestNull()
     {
         app.printSalaries(null);
     }
 
     @Test
-    void printSalariesTestEmpty()
+    public void printSalariesTestEmpty()
     {
         ArrayList<Employee> employess = new ArrayList<Employee>();
         app.printSalaries(employess);
     }
 
     @Test
-    void printSalariesTestContainsNull()
+    public void printSalariesTestContainsNull()
     {
         ArrayList<Employee> employess = new ArrayList<Employee>();
         employess.add(null);
         app.printSalaries(employess);
     }
     @Test
-    void printSalaries()
+    public void printSalaries()
     {
         ArrayList<Employee> employees = new ArrayList<Employee>();
         Employee emp = new Employee();
@@ -52,5 +53,12 @@ public class AppTest
         employees.add(emp);
         app.printSalaries(employees);
     }
+
+    @Test
+    public void sanityCheck() {
+        System.out.println("JUnit is working!");
+        assertTrue(true);
+    }
+
 
 }
